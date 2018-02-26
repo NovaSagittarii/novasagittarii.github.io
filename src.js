@@ -216,7 +216,7 @@ var sketchProc = function(processingInstance){ with (processingInstance){
         this.v = min(this.v+this.ac/10, 1.2);
       break;
       case NAT:
-        this.v = min(this.v+this.ac/10, 20);
+        this.v = min(this.v+this.ac/10, 1.3);
     }
     switch(this.ID){
       case ARCHER:
