@@ -334,7 +334,7 @@ Shield.prototype.draw = function(){
     this.a += radians(1.2);
     this.x /= 1.2;
     ++ this.cd;
-    if(this.cd > 7 && keys[32]){
+    if(this.cd > 7 && (keys[32] || mouseIsPressed)){
         this.x = 4;
         this.cd = 0;
         pullets.push(new Bullet(x, y, a, 1, 1));
