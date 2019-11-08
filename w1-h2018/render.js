@@ -72,7 +72,7 @@ let ene = [];
 let bkgd;
 let bullet = {};
 let crossHair;
-let bkgdsong;
+//let bkgdsong;
 let MARSKE;
 function preload(){
 	img = loadImage('assets/2018-12-01.png');
@@ -92,7 +92,7 @@ function preload(){
 	laserb = loadImage('assets/laserb.png');
 	bkgd = loadImage('assets/veil-4000.jpg');
 	
-    bkgdsong = loadSound('assets/music/Bag Raiders - Shooting Stars (Official Video).mp3');
+    //bkgdsong = loadSound('assets/music/Bag Raiders - Shooting Stars (Official Video).mp3');
     MARSKE = loadFont("assets/Marske.ttf");
 }
 
@@ -472,7 +472,7 @@ function draw(){
             triangle(mouseX, mouseY, mouseX + 12, mouseY + 15, mouseX, mouseY + 20);
             if(mp){
                 state = 1;
-                bkgdsong.loop();
+                //bkgdsong.loop();
             }
             break;
         case 1: // play
@@ -553,7 +553,7 @@ function draw(){
                 fill(255, 255, 255);
                 textSize_(width/20);
                 text("You died!\n\nScore: " + ~~max(0, score), width/2, height/2);
-                bkgdsong.amp(0, 4);
+                //bkgdsong.amp(0, 4);
                 noLoop();
             }
             fill(255, 0, 0, (hp2/maxhp < 0.5) ? (Math.cos(radians(frameCount*3))*10 + 80*(0.8-hp2/maxhp)) : 0);
